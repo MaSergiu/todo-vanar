@@ -9,9 +9,19 @@
     <div class="col-md-4">
         <a href="#" class="btn btn-default btn-lg">
             {{title}}
+            (
+            <span *ngIf='status == 0'>Waiting for Start</span>
+            <span *ngIf='status == 1'>Started</span>
+            <span *ngIf='status == 2'>Finished</span>
+            <span *ngIf='status == 3'>Canceled</span>
+            <span *ngIf='status == 4'>Deleted</span>
+            )
         </a>
     </div>
     <div class="col-md-2">
         <a href="">User Name</a>
+    </div>
+    <div class="col-md-1">
+        <a (click)='deleteTask()' href="#" class='btn btn-danger btn-lg'><span class='glyphicon glyphicon-trash'></span> Delete task</a>
     </div>
 </div>
