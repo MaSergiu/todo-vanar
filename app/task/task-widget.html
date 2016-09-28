@@ -1,0 +1,17 @@
+<div class="row well">
+    <div class="col-md-1" [ngSwitch]='status'>
+        <span class="glyphicon glyphicon-time" *ngSwitchCase='0'></span>
+        <span class="glyphicon glyphicon-flag" *ngSwitchCase='1'></span>
+        <span class="glyphicon glyphicon-check" *ngSwitchCase='2'></span>
+        <span class="glyphicon glyphicon-adjust" *ngSwitchCase='3'></span>
+        <span class="glyphicon glyphicon-eye-close" *ngSwitchCase='4'></span>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="btn btn-default btn-lg">
+            {{title}}
+        </a>
+    </div>
+    <div class="col-md-2">
+        <a href="">User Name</a>
+    </div>
+</div>
