@@ -1,0 +1,14 @@
+<div class="container">
+    <form action="">
+        <div class="input-group">
+            <!-- #angularIdForTitle construction is an ID for Angular -->
+            <!-- titleOk is a local variable in HTML for Angular -->
+            <input #angularIdForTitle (keyup)='titleOk = checkLength(angularIdForTitle.value)' type="text" class="form-control" placeholder="Enter task title" aria-describedby='btask-icon'>
+            <span class="input-group-addon" id='task-icon'>@</span>
+        </div>
+
+        {{angularIdForTitle.value}}
+        <div class="alert alert-danger" *ngIf='!titleOk && angularIdForTitle.value != ""' role='alert'>Required 3 characters</div>
+
+    </form>
+</div>

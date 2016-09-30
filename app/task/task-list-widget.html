@@ -1,0 +1,7 @@
+<h2>{{title}}</h2>
+<div class="container">
+    <!-- [taskTitle] - it is a self created attribute that binds 'itemTask.title' property -->
+    <task *ngFor="let itemTask of tasksDatabase; let i = index;"
+    [taskTitle]="itemTask.title"
+    [taskManagers] = 'itemTask.managers'></task>
+</div>
