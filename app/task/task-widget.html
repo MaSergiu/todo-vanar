@@ -22,6 +22,9 @@
         <a href="">User Name</a>
     </div>
     <div class="col-md-1">
-        <a (click)='deleteTask()' href="#" class='btn btn-danger btn-lg'><span class='glyphicon glyphicon-trash'></span> Delete task</a>
+        <a *ngIf='status == 0 || status == 3' (click)='startWork()' href="#" class='btn btn-danger btn-lg'><span class='glyphicon glyphicon-play'></span> Start Work</a>
+        <a *ngIf='status == 1' (click)='finishIt()' href="#" class='btn btn-danger btn-lg'><span class='glyphicon glyphicon-ok'></span> Finish Task</a>
+        <a *ngIf='status == 1' (click)='cancelIt()' href="#" class='btn btn-danger btn-lg'><span class='glyphicon glyphicon-exclamation-sign'></span> Cancel Task</a>
+        <a *ngIf='status == 0 || status == 1 || status == 2 || status == 3' (click)='deleteTask()' href="#" class='btn btn-danger btn-lg'><span class='glyphicon glyphicon-trash'></span> Delete Task</a>
     </div>
 </div>
